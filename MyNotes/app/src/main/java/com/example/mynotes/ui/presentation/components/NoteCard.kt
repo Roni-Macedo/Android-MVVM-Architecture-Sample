@@ -40,7 +40,7 @@ fun NoteCard(note: Note) {
                 text = note.title,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                fontSize = MaterialTheme.typography.titleMedium.fontSize,
+                fontSize = MaterialTheme.typography.titleLarge.fontSize,
                 textAlign = TextAlign.Start,
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -48,7 +48,7 @@ fun NoteCard(note: Note) {
                 text = if (note.description.length > 25) note.description.take(25) + "..." else note.description,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                fontSize = MaterialTheme.typography.titleSmall.fontSize,
+                fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                 textAlign = TextAlign.Start,
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -60,7 +60,7 @@ fun NoteCard(note: Note) {
             ) {
                 Text(
                     text = note.dateTime,
-                    fontSize = MaterialTheme.typography.labelMedium.fontSize,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     textAlign = TextAlign.Left,
                 )
             }
