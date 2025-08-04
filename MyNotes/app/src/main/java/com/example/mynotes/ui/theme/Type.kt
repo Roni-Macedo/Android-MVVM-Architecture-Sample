@@ -8,43 +8,54 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.mynotes.R
 
-val interFontFamily = FontFamily(
-    Font(R.font.inter_bold, FontWeight.Bold),
-    Font(R.font.inter_semi_bold, FontWeight.SemiBold),
-    Font(R.font.inter_regular, FontWeight.Normal),
-    Font(R.font.inter_light, FontWeight.Light)
+val montserrat = FontFamily(
+    Font(R.font.montserrat_bold, FontWeight.Bold),
+    Font(R.font.montserrat_semi_bold, FontWeight.SemiBold),
+    Font(R.font.montserrat_medium, FontWeight.Medium),
+    Font(R.font.montserrat_regular, FontWeight.Normal),
+    Font(R.font.montserrat_light, FontWeight.Light),
+    Font(R.font.montserrat_extra_light, FontWeight.ExtraLight),
+    Font(R.font.montserrat_thin, FontWeight.Thin),
 )
 
-val Typography = Typography(
+val typography = Typography(
     headlineSmall = TextStyle(
-        fontFamily = interFontFamily,
+        fontFamily = montserrat,
         fontWeight = FontWeight.Bold,
         fontSize = 24.sp,
         lineHeight = 32.sp,
         letterSpacing = 0.sp
     ),
     titleLarge = TextStyle(
-        fontFamily = interFontFamily,
+        fontFamily = montserrat,
         fontWeight = FontWeight.SemiBold,
         fontSize = 22.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),
     bodyLarge = TextStyle(
-        fontFamily = interFontFamily,
+        fontFamily = montserrat,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
     labelSmall = TextStyle(
-        fontFamily = interFontFamily,
+        fontFamily = montserrat,
         fontWeight = FontWeight.Light,
         fontSize = 11.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = montserrat,
+        fontWeight = FontWeight.Thin,
+        fontSize = 20.sp,
+        lineHeight = 26.sp,
+        letterSpacing = 2.25.sp
     )
 )
+
 
 
 /**
