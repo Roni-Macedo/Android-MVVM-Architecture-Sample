@@ -1,4 +1,4 @@
-package com.example.mynotes.ui
+package com.example.mynotes.ui.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,7 +7,6 @@ import com.example.mynotes.data.repository.TarefaRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
@@ -18,7 +17,7 @@ class TarefaViewModel @Inject constructor(
 
     val tarefas = repository.getAll().stateIn(
         scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5000),
+        started = SharingStarted.Companion.WhileSubscribed(5000),
         initialValue = emptyList()
     )
 
@@ -43,12 +42,5 @@ class TarefaViewModel @Inject constructor(
     suspend fun getTarefaById(id: Int): TarefaEntity? {
         return repository.getById(id)
     }
-
-
-//    suspend fun getTarefaById(id: Int): TarefaEntity? {
-//        return repository.getAll()
-//            .firstOrNull()
-//            ?.find { it.id == id }
-//    }
 
 }
